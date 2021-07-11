@@ -12,10 +12,10 @@ namespace StackQueue
             {
 
                 this.front = this.rear = node;
-                 
+
             }
-             this.rear.next = node;
-             this.rear = node;          
+            this.rear.next = node;
+            this.rear = node;
         }
         public void Display()
         {
@@ -25,6 +25,19 @@ namespace StackQueue
             {
                 Console.Write($"|{temp.data}|");
                 temp = temp.next;
+            }
+        }
+        public void Dequeue()
+        {
+            if (this.front == null)
+            {
+                Console.WriteLine("Queue is Empty");
+                
+            }
+            else
+            {
+                Console.WriteLine($"\n{front.data} is removed");
+                this.front = this.front.next;
             }
         }
     }
