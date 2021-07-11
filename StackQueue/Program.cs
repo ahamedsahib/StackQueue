@@ -7,14 +7,11 @@ namespace StackQueue
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Stack Queue Program");
-            StackOperations stack = new StackOperations();
-            stack.Push(50);
-            stack.Push(76);
-            stack.Push(30);
-            stack.Push(20);
-            stack.Push(46);
-
-            stack.pop();
+            QueueOperation queue = new QueueOperation();
+            queue.Enqueue(30);
+            queue.Enqueue(50);
+            queue.Enqueue(76);
+            queue.Display();
         }
     }
 }
