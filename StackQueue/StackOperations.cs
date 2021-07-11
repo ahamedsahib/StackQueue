@@ -17,6 +17,21 @@ namespace StackQueue
             }
             this.top = node;
         }
+        public void pop()
+        {
+            while (top != null)
+            {
+                Console.WriteLine($"the top element is {top.data}");
+                Display();
+                if (top.next== null)
+                {
+                    Console.WriteLine("All the Elements are popped");
+                    break;
+                }
+
+                top = top.next;
+            }
+        }
         public void Display()
         {
             Node temp = this.top;
